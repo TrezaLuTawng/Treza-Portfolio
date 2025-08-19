@@ -1,0 +1,137 @@
+<a id="top-page"> </a>
+<header class="text-gray-600 body-font bg-indigo-500">
+  <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+    <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+      </svg>
+      <span class="ml-3 text-xl text-white">Portfolio</span>
+    </a>
+    <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+      <a class="mr-5 hover:text-green-200 text-white" (click)="Projects()" href="#projects">Projects</a>
+      <a class="mr-5 hover:text-green-200 text-white" (click)="Education()" href="#education">Education</a>
+      <a class="mr-5 hover:text-green-200 text-white" (click)="Certificates()" href="#certificates">Certificates</a>
+      <a class="mr-5 hover:text-green-200 text-white" (click)="ExpandAll()" href="#top-page">Expand All</a>
+      <a class="mr-5 hover:text-green-200 text-white" (click)="CollapseAll()" href="#top-page">Collapse All</a>
+      <a class="mr-5 hover:text-green-200 text-white" href="#contacts">Contacts</a>
+    </nav>
+  </div>
+</header>
+<section class="flex">
+  <div class="w-3/5 ml-20 mt-20 mr-10 flex flex-wrap ">
+    <div>
+    <p class="text-gray-900 text-center ml-100 text-3xl title-font font-medium">Treza Lu Taung</p>
+      <p>I am a full-stack developer based in Yangon, Myanmar, with over 3 years of experience in designing
+        and developing front-end and back-end applications for logistics and retail industries. Skilled in C#,
+         ASP.NET, Angular, TypeScript, JavaScript, and MS SQL, I have successfully led projects including Gate Management
+          Systems (TMS) and Learning Management Systems (LMS) using modern technologies such as Azure Cloud, JWT authentication, SSR,
+           and Syncfusion UI components. Alongside development, I maintain IT infrastructure including networks, servers,
+            and devices. Previously, I provided software support for POS solutions, collaborating closely with clients to
+             tailor applications to their needs. I bring strong problem-solving abilities, effective communication skills, and a dedication to delivering high-quality software solutions on time.</p>
+  </div>
+  </div>
+      <img class="h-64 mr-20 mt-20 rounded" alt="Treza Lu Taung" src="assets/images/portfo.jpg" />
+</section>
+<section>
+  <a id="projects"> </a>
+  <div [ngClass]="{'block': projectsActive,'hidden': !projectsActive}">
+    <app-projects></app-projects>
+  </div>
+  <a id="education"> </a>
+  <div [ngClass]="{'block': educationActive,'hidden': !educationActive}">
+    <app-education></app-education>
+  </div>
+  <a id="certificates"> </a>
+  <div [ngClass]="{'block': certificatesActive,'hidden': !certificatesActive}">
+    <app-certificates></app-certificates>
+  </div>
+
+</section>
+<footer class="text-gray-600 body-font bg-indigo-500 mt-10">
+  <div class="container px-5 py-3 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+    <div class="flex-grow flex flex-wrap md:pr-20 -mb-10 md:mt-0 mt-0 md:text-left text-center order-first">
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Email</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-cyan-400 hover:text-white">trezalutawng017&#64;gmail.com</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Phone</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-cyan-400 hover:text-white">09954778106 / 09782056797</a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Address</h2>
+        <nav class="list-none mb-10">
+          <li class="text-cyan-400 whitespace-pre-line hover:text-white">
+            No.789/ Ainedar (8) Street, Ainedar Road, North<br>
+            Okkalapa Township,<br>
+            Yangon, Myanmar.
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <h2 class="title-font font-medium text-white tracking-widest text-sm mb-3">Links</h2>
+        <nav class="list-none mb-10">
+          <li>
+            <a class="text-cyan-400 hover:text-white" href="https://www.linkedin.com/in/treza-lutawng-2829ab247/">
+              LinkedIn</a>
+          </li>
+          <li>
+            <a class="text-cyan-400 hover:text-white"
+            href="https://www.youtube.com/@dailyworkout912">
+            YouTube Channel</a>
+          </li>
+          <li>
+            <a class="text-cyan-400 hover:text-white"
+            href="https://github.com/TrezaLuTawng/Lu-Portfolio.git">
+              GitHub
+            </a>
+          </li>
+        </nav>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+        <a id="contacts"> </a>
+        <h2 class="title-font font-medium text-white hover:text-cyan-400 tracking-widest text-sm mb-3">
+
+        </h2>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-100">
+    <div class="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
+      <p class="text-gray-500 text-sm text-center sm:text-left">© 2025 Treza
+      </p>
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+        <a class="text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+        <a class="ml-3 text-gray-500">
+          <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" class="w-5 h-5" viewBox="0 0 24 24">
+            <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+            <circle cx="4" cy="4" r="2" stroke="none"></circle>
+          </svg>
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>
